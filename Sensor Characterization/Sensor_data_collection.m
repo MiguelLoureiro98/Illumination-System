@@ -1,6 +1,8 @@
-%
-%
-%
+% MATLAB script to collect data from the LDR sensor using an Arduino.
+% The raw data is ploted and the sensor's resistance is computed. 
+% This will help in characterizing the sensor's illuminance-resistance
+% curve.
+
 clear
 clc
 
@@ -23,4 +25,4 @@ V = 5;
 R = 9970;
 R_ldr = R.*(data./(V-data));
 R_LDR = mean(R_ldr);
-fprintf(1,"R_LDR = %.3f Ohms", R_LDR);
+fprintf(1,"R_LDR = %.3f Ohms\n", R_LDR);
